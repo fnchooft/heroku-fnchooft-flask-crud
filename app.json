@@ -1,0 +1,13 @@
+{
+  "name": "Flask Heroku-Thingie CRUD-Test",
+  "description": "Flask Heroku-Thingie CRUD-Test",
+  "keywords": [
+    "flask",
+    "python",
+    "sample"
+  ],
+  "repository": "https://github.com/fnchooft/heroku-fnchooft-flask-crud",
+  "addons": [
+    "heroku-postgresql"
+  ]
+}
