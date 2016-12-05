@@ -20,5 +20,7 @@ Flask Heroku Sample
 * `git push heroku master`
 
 ## Contributors
+ * [Fabian](https://twitter.com/fnchooft)
 
-* [Yefim](https://twitter.com/yefim)
+## Inspired by
+ * [Yefim example](https://github.com/yefim/flask-heroku-sample)

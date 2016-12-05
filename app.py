@@ -25,7 +25,7 @@ db.create_all()
 
 @app.route('/')
 def index():
-  return render_template('index.html', users=Thing.query.all())
+  return render_template('index.html', things=Thing.query.all())
 
 
 @app.route('/thing', methods=['POST'])
