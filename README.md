@@ -9,6 +9,12 @@ Flask Heroku Sample
 * `source venv/bin/activate`
 * `pip install -r requirements.txt`
 
+If you want to test from the command-line execute:
+
+```bash
+python app.py
+```
+
 ## Deploy
 ### Heroku cli / Command line
 * `heroku create`
@@ -22,6 +28,27 @@ Enter into your heroku-account, choose `Github` as your `Deployment method`. In 
 
 After the connection has been established go to the
 `Manual deploy`-option and choose your branch.
+
+
+
+## Curl-usage
+
+
+
+### Add a Thing
+```bash
+curl --data 'type=House&name=Chalet03' http://localhost:5000/thing
+```
+
+### Update a Thing
+```bash
+curl --data 'id=1&type=Haus&name=Chalet03' http://localhost:5000/thing
+```
+
+### Delete a Thing
+```bash
+curl --data 'id=1' http://localhost:5000/thing/delete
+```
 
 
 ## Author

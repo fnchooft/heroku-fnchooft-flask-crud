@@ -1,9 +1,24 @@
+<hr>
+<h1>New Thing...</h1>
+<p><a href="http://www.github.com/fnchooft/heroku-fnchooft-flask-crud">Implementation on github...</a></p>
+<hr>
 <form action="{{ url_for('thing') }}" method="post">
-  <p><a href="http://www.github.com/fnchooft/heroku-fnchooft-flask-crud">Implementation on github...</a></p>
   <input type='text' name='type' placeholder='Type...'/>
   <input type='text' name='name' placeholder='Name...'/>
   <input type='submit'/>
 </form>
+<hr>
+<h1>Edit or delete Thing...</h1>
+<hr>
 {% for t in things %}
-  <p>{{ t.type }} -- {{ t.name }}</p>
+  <form action="{{ url_for('update_thing') }}" method="post">
+    <input type='hidden' name='id'   value="{{ t.id }}" />
+    <input type='text'   name='type' value="{{ t.type }}" />
+    <input type='text'   name='name' value="{{ t.name }}" />
+    <input type='submit' value="Update" />
+  </form>
+  <form action="{{ url_for('delete_thing') }}" method="post">
+    <input type='hidden' name='id' value="{{ t.id }}" />
+    <input type='submit' value="Delete thing above" />
+  </form>
 {% endfor %}
