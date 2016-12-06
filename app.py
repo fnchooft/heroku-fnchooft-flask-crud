@@ -16,9 +16,9 @@ class Thing(db.Model):
   type = db.Column(db.String(100))
   name = db.Column(db.String(100))
 
-  def __init__(self, name, email):
+  def __init__(self, type,name):
+    self.type = type
     self.name = name
-    self.email = email
 
 db.create_all()
 
