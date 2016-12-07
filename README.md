@@ -29,6 +29,7 @@ Enter into your heroku-account, choose `Github` as your `Deployment method`. In 
 After the connection has been established go to the
 `Manual deploy`-option and choose your branch.
 
+The link to the deployed app is: [https://fnchooft-crud-test.herokuapp.com](https://fnchooft-crud-test.herokuapp.com)
 
 
 ## Curl-usage
@@ -39,17 +40,19 @@ After the connection has been established go to the
 ```bash
 curl --data 'type=House&name=Chalet03' http://localhost:5000/thing
 ```
+on create no id is passed and a new primary key will be created.
 
 ### Update a Thing
 ```bash
-curl --data 'id=1&type=Haus&name=Chalet03' http://localhost:5000/thing
+curl --data 'id=1&type=Haus&name=Chalet03' http://localhost:5000/thing/update
 ```
+on update the id must be passed since both the attributes type and name may be changed.
 
 ### Delete a Thing
 ```bash
 curl --data 'id=1' http://localhost:5000/thing/delete
 ```
-
+only the id (primary key) is needed to delete the thing. 
 
 ## Author
  * [Fabian N.C. van 't Hooft](https://twitter.com/FabianHooft)
